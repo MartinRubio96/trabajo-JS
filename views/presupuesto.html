@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+        <title>Mi Web de noticias</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/styles.css">
+
+    </head>
+    <body>
+
+        <header class="_index_header">
+            <h1>Noticias y Móviles</h1>
+            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navegación</a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Índice</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./galeria.html">Galería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Presupuesto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="_main">
+            
+            <div class="_cajagris">
+                <form class="_form">
+                    <div class="_apartado">
+                        <p>Datos de contacto</p>
+
+                        <table>
+                            <tr>
+                                <!-- solo letras, longitud maxima 15 char -->
+                                <td><label for="nombre">Nombre:</label></td>
+                                <td><input id="nombre" type="text" pattern="[A-Za-z]{1,15}" required size="18"></td>
+                            </tr>
+                            <tr>
+                                <!-- solo letras, longitud maxima 40 char -->
+                                <td><label for="apellidos">Apellidos:</label></td>
+                                <td><input id="apellidos" type="text" pattern="[A-Za-z\s]{1,40}" required size="18"></td>
+                            </tr>
+                            <tr>
+                                <!-- solo num, longitud 9 char -->
+                                <td><label for="telefono">Teléfono:</label></td>
+                                <td><input id="telefono" type="text" pattern="\d{9}" required size="18"></td>
+                            </tr>
+                            <tr>
+                                <!-- estandar de correo -->
+                                <td><label for="correo">Correo electrónico:</label></td>
+                                <td><input id="correo" type="email" pattern="[^\s]+@[^\s]+[.][A-Za-z]{2,}" required size="18"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="_apartado">
+                        <p>Presupuesto</p>
+
+                        <!-- calculo del presupuesto final -->
+                        <table>
+                            <tr>
+                                <td>Producto:</td>
+                                <td><select id="producto" onchange="calcular_presupuesto()">
+                                    <option value="galaxy_s21">Galaxy S21</option>
+                                    <option value="galaxy_s23">Galaxy S23</option>
+                                    <option value="google_pixel8">Google Pixel 8</option>
+                                    <option value="google_pixel9">Google Pixel 9</option>
+                                    <option value="iphone_se">Iphone SE</option>
+                                    <option value="motorola_edge_50">Motorola Edge 50</option>
+                                    <option value="realme_gt2">Realme GT2</option>
+                                    <option value="xiaomi_13t">Xiaomi 13T</option>
+                                    <option value="xiaomi_redmi_note_12">Xiaomi Redmi Note 12</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td><label for="plazo">Plazo:</label></td>
+                                <td><input type="number" id="plazo" min="1" onchange="calcular_presupuesto()"><select id="dm" onchange="calcular_presupuesto()" size="2">
+                                    <option value="dias">Dias</option>
+                                    <option value="meses">Meses</option>
+                                </select></td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr><td>Elige los extras</td></tr>
+                        </table>
+                        
+
+                        <div>
+                            Color personalizado:
+                            <input id="colorperso" class="_check" type="checkbox" onchange="calcular_presupuesto()">
+                            Memoria RAM:
+                            <input id="ram" class="_check" type="checkbox" onchange="calcular_presupuesto()">
+                            Almacenamiento:
+                            <input id="almacen" class="_check" type="checkbox" onchange="calcular_presupuesto()">
+                        </div>
+                            
+                        <table>
+                            <tr>
+                                <td>Presupuesto:</td>
+                                <td><input type="text" id="presupuesto" size="10" disabled> €</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="_apartado">
+                        <p>Aceptación de condiciones y envio del presupuesto</p>
+                        <p>He leído y acepto las <a href="../media/pdf/politicaPrivacidadDatos.pdf" target="_blank">políticas de privacidad</a>: <input type="checkbox" required></p>
+                    </div>
+                    <input class="_boton" type="submit" value="Enviar"><input class="_boton" type="reset" value="Borrar">
+                </form>
+            </div>
+        </main>
+
+        <footer class="main_footer">
+
+            <div class="container">
+                <div class="footer_text">@ 2025 Noticias y móviles | Calle Alonso Cano 44 | Todos los derechos reservados</div>
+                <div class="footer_links">
+
+                    <!-- a estos links les he puesto un transition de color como a los elementos del navbar  -->
+                    <ul class="simple_list">
+                        <li><a class="_link" href="../media/pdf/politicaPrivacidadDatos.pdf" target="_blank">Política de privacidad</a></li>
+                        <li><a class="_link" href="../media/pdf/avisolegal.pdf" target="_blank">Aviso legal</a></li>
+                    </ul>
+                    <ul class="simple_list">
+                        <li><a href="#"><img src="../media/images/rrss/facebook.png" alt="facebook logo"></a></li>
+                        <li><a href="#"><img src="../media/images/rrss/insta.png" alt="instagram logo"></a></li>
+                        <li><a href="#"><img src="../media/images/rrss/whatsapp.png" alt="whatsapp logo"></a></li>
+                        <li><a href="#"><img src="../media/images/rrss/x.png" alt="x logo"></a></li>
+                        <li><a href="#"><img src="../media/images/rrss/youtube.png" alt="youtube logo"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- contiene las funciones para calcular el presupuesto -->
+        <script src="../scripts/calculadora.js"></script>
+        <!-- bootstrap 5 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

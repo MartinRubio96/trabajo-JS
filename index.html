@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <title>Mi Web de noticias</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="./styles/styles.css">
+
+    </head>
+    <body>
+        <header class="_index_header">
+            <h1>Noticias y Móviles</h1>
+            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navegación</a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Índice</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./views/galeria.html">Galería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./views/presupuesto.html">Presupuesto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./views/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>        
+
+        <!-- noticias, anuncios, articulos de opinion, productos recomendados -->
+        <main class="_main">
+            <div class="container">
+                <div class="row">
+    
+                    <section class="_section _hoja"> 
+                        <h2>Sección Noticias</h2>
+                        <!-- NOTICIAS -->
+                        <!-- contenido cargado desde json -->
+                        <div class="_title" id="titulo"></div>
+
+                        <div class="_content">
+                            <div class="_noticia_text" id="noticia1"></div>
+                            <img src="./media/images/news/student.jpg" width="350" height="300" alt="student">
+                        </div>
+
+                        <div class="_content">
+                            <div class="_noticia_text" id="noticia2"></div>
+                            <img src="./media/images/news/medical-student.png" width="350" height="300" alt="medical student">
+                        </div>
+
+                        <div class="_content">
+                            <div class="_noticia_text" id="noticia3"></div>
+                            <img src="./media/images/news/drugs.png" width="350" height="300" alt="drugs">
+                        </div>
+
+                        <div class="_content">
+                            <div class="_noticia_text" id="noticia4"></div>
+                            <img src="./media/images/news/pride.jpg" width="350" height="300" alt="pride">
+                        </div>
+
+                        <div class="_content">
+                            <div class="_noticia_text" id="noticia5"></div>
+                            <img src="./media/images/news/campus.jpg" width="350" height="300" alt="campus">
+                        </div>
+
+                    </section>
+    
+                    <!-- OPINION -->
+                    <section class="_section _opinion">
+                        <h2>Sección Opinión</h2>
+                        <div class="_opinion_cuerpo">
+                            <div class="_menu">
+                                Menú de navegación
+                                <ul>
+                                    <li>Opcion 1</li>
+                                    <li>Opcion 2</li>
+                                    <li>Opcion 3</li>
+                                </ul>
+                                <a href="#">Otro enlace</a>                                
+                            </div>
+
+                            <!-- imagenes aleatorias generadas mediante lorem picsum -->
+                            <div class="_opinion_article">
+                                <h4>Articulo de opinion</h4>
+                                <img src="https://picsum.photos/200/150?a" width="200" height="150" alt="imagen aleatoria">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit vel, officiis culpa ab atque incidunt tempore repellat soluta animi suscipit
+                            </div>
+                            <div class="_opinion_article">
+                                <h4>Articulo de opinion</h4>
+                                <img src="https://picsum.photos/200/150?b" width="200" height="150" alt="imagen aleatoria">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit vel, officiis culpa ab atque incidunt tempore repellat soluta animi suscipit
+                            </div>
+                            <div class="_opinion_article">
+                                <h4>Articulo de opinion</h4>
+                                <img src="https://picsum.photos/200/150?c" width="200" height="150" alt="imagen aleatoria">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit vel, officiis culpa ab atque incidunt tempore repellat soluta animi suscipit
+                            </div>
+                            <div class="_opinion_article">
+                                <h4>Articulo de opinion</h4>
+                                <img src="https://picsum.photos/200/150?d" width="200" height="150" alt="imagen aleatoria">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit vel, officiis culpa ab atque incidunt tempore repellat soluta animi suscipit
+                            </div>
+                            
+                        </div>
+                    </section>
+                    
+                    <!-- ARTICULOS RECOMENDADOS -->
+                    <section class="_section _hoja">
+                        <h2>Artículos Recomendados</h2>
+                        
+                        <div class="_articulos">
+                            <div class="_article">
+                                <div class="_articulo_texto">
+                                    <h3>Nombre Artículo</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim ab vitae, dolor expedita repellat, impedit dolore ratione exercitationem, tempore dolorum accusamus repellendus praesentium excepturi? Placeat dolor animi qui nobis reprehenderit.</p>
+                                </div>
+                                <img src="https://picsum.photos/300/200?a" width="300" height="200" alt="imagen aleatoria">
+                            </div>
+                            <div class="_article">
+                                <div class="_articulo_texto">
+                                    <h3>Nombre Artículo</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim ab vitae, dolor expedita repellat, impedit dolore ratione exercitationem, tempore dolorum accusamus repellendus praesentium excepturi? Placeat dolor animi qui nobis reprehenderit.</p>
+                                </div>
+                                <img src="https://picsum.photos/300/200?b" width="300" height="200" alt="imagen aleatoria">
+                            </div>
+                            <div class="_article">
+                                <div class="_articulo_texto">
+                                    <h3>Nombre Artículo</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim ab vitae, dolor expedita repellat, impedit dolore ratione exercitationem, tempore dolorum accusamus repellendus praesentium excepturi? Placeat dolor animi qui nobis reprehenderit.</p>
+                                </div>
+                                <img src="https://picsum.photos/300/200?c" width="300" height="200" alt="imagen aleatoria">
+                            </div>
+                            <div class="_article">
+                                <div class="_articulo_texto">
+                                    <h3>Nombre Artículo</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim ab vitae, dolor expedita repellat, impedit dolore ratione exercitationem, tempore dolorum accusamus repellendus praesentium excepturi? Placeat dolor animi qui nobis reprehenderit.</p>
+                                </div>
+                                <img src="https://picsum.photos/300/200?d" width="300" height="200" alt="imagen aleatoria">
+                            </div>
+                            <div class="_article">
+                                <div class="_articulo_texto">
+                                    <h3>Nombre Artículo</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim ab vitae, dolor expedita repellat, impedit dolore ratione exercitationem, tempore dolorum accusamus repellendus praesentium excepturi? Placeat dolor animi qui nobis reprehenderit.</p>
+                                </div>
+                                <img src="https://picsum.photos/300/200?e" width="300" height="200" alt="imagen aleatoria">
+                            </div>
+                            <div class="_article">
+                                <div class="_articulo_texto">
+                                    <h3>Nombre Artículo</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim ab vitae, dolor expedita repellat, impedit dolore ratione exercitationem, tempore dolorum accusamus repellendus praesentium excepturi? Placeat dolor animi qui nobis reprehenderit.</p>
+                                </div>
+                                <img src="https://picsum.photos/300/200?f" width="300" height="200" alt="imagen aleatoria">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ANUNCIOS -->
+                    <section class="_section _anuncios">
+                        <h2>Sección Anuncios</h2>
+                        <div class="_opinion_cuerpo">
+
+                            <!-- imagenes aleatorias generadas mediante lorem picsum -->
+                            <!-- enlaces en las imagenes de los anuncios, llevarian a la web del anunciante -->
+                            <div class="_opinion_article _anuncio">
+                                <h4>Anuncio</h4>
+                                <a href="#"><img src="https://picsum.photos/200/150?e" width="200" height="150" alt="imagen aleatoria"></a>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit vel, officiis culpa ab atque incidunt tempore repellat soluta animi suscipit
+                            </div>
+                            <div class="_opinion_article _anuncio">
+                                <h4>Anuncio</h4>
+                                <a href="#"><img src="https://picsum.photos/200/150?f" width="200" height="150" alt="imagen aleatoria"></a>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit vel, officiis culpa ab atque incidunt tempore repellat soluta animi suscipit
+                            </div>
+                            <div class="_opinion_article _anuncio">
+                                <h4>Anuncio</h4>
+                                <a href="#"><img src="https://picsum.photos/200/150?g" width="200" height="150" alt="imagen aleatoria"></a>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit vel, officiis culpa ab atque incidunt tempore repellat soluta animi suscipit
+                            </div>
+                            <div class="_opinion_article _anuncio">
+                                <h4>Anuncio</h4>
+                                <a href="#"><img src="https://picsum.photos/200/150?h" width="200" height="150" alt="imagen aleatoria"></a>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit vel, officiis culpa ab atque incidunt tempore repellat soluta animi suscipit
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer class="main_footer">
+
+            <!-- esta clase container hace responsive a lo que contiene...? -->
+            <div class="container">
+                <div class="footer_text">@ 2025 Noticias y móviles | Calle Alonso Cano 44 | Todos los derechos reservados</div>
+                <div class="footer_links">
+
+                    <!-- a estos links les he puesto un transition de color como a los elementos del navbar  -->
+                    <ul class="simple_list">
+                        <li><a class="_link" href="./media/pdf/politicaPrivacidadDatos.pdf" target="_blank">Política de privacidad</a></li>
+                        <li><a class="_link" href="./media/pdf/avisolegal.pdf" target="_blank">Aviso legal</a></li>
+                    </ul>
+                    <ul class="simple_list">
+                        <li><a href="#"><img src="./media/images/rrss/facebook.png" alt="facebook logo"></a></li>
+                        <li><a href="#"><img src="./media/images/rrss/insta.png" alt="instagram logo"></a></li>
+                        <li><a href="#"><img src="./media/images/rrss/whatsapp.png" alt="whatsapp logo"></a></li>
+                        <li><a href="#"><img src="./media/images/rrss/x.png" alt="x logo"></a></li>
+                        <li><a href="#"><img src="./media/images/rrss/youtube.png" alt="youtube logo"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>    
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script src="scripts/script.js"></script>
+    </body>
+</html>

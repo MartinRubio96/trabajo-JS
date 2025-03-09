@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+._index_header {
+    background-color: #001d02;
+}
+
+._main {
+    min-height: 100dvh;
+    background-color: #fff;
+}
+
+.main_footer {
+    background-color: #001d02;
+    color: #dddddd;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: #dddddd;
+}
+
+h2,h4 {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+._section {
+    height: auto;
+    padding-top: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+._hoja {
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    width: 90%;
+    margin-top: 2rem;
+}
+
+._opinion {
+    background-color: #001d02;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+}
+
+._opinion_cuerpo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+._menu {
+    font-size: 18px;
+    background-color: #053508;
+    color: #819d4c;
+    border-radius: 1rem;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+._menu ul {
+    list-style-type: none;
+    border-bottom: 1px solid black;
+    line-height: 4rem;
+}
+
+._opinion_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #053508;
+    font-size: 14px;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    border-radius: 1rem;
+}
+
+._anuncio {
+    background-color: #408545;
+}
+
+._opinion_article img {
+    padding: .5rem;
+}
+
+._anuncios {
+    background-color: #053508;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+}
+
+.container {
+    max-width: 100dvw;
+}
+
+.footer_text {
+    display: block;
+    text-align: center;
+    padding-bottom: .5rem;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-bottom: 1px solid #888888;
+}
+
+.footer_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .5rem;
+}
+
+._link {
+    color: #aaaaaa;
+    transition: color .15s ease-in-out;
+    text-decoration: none;
+}
+
+._link:hover {
+    color: #dddddd;
+}
+
+.simple_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-bottom: .5rem;
+}
+
+._title {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+._content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #888888;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+._article {
+    width: 50%;
+    min-width: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #888888;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+._articulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+._noticia_text {
+    max-width: 70%;
+}
+
+._articulo_texto {
+    width: 50%;
+}
+
+._cajagris {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: #eee;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 90%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+._form {
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px dotted black;
+
+}
+
+._imagen {
+    width: 20rem;
+    height: auto;
+    border: 1px solid black;
+}
+
+._movil {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+._apartado {
+    margin: 1rem;
+    margin-top: 1.5rem;;
+    border-bottom: 1px dotted black;
+}
+
+tr {
+    height: 4rem;
+}
+
+td {
+    width: 10rem;
+}
+
+#plazo {
+    margin-right: 1rem;
+}
+
+._check {
+    margin-right: 1rem;
+}
+
+._boton{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+._espacio {
+    margin-top: .5rem;
+    margin-bottom: 1.5rem; 
+}
+
+#mapa {
+    width: 95dvw;
+    height: 100dvh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    border: 1px solid black;
+}
+
+._contacto {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+._contacto ul{
+    list-style-type: none;
+}
