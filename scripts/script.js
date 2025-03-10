@@ -1,4 +1,4 @@
-const NOTICIAS = [document.getElementById('noticia1'), document.getElementById('noticia2'), document.getElementById('noticia3'), document.getElementById('noticia4'), document.getElementById('noticia5')]
+const noticias = [document.getElementById('noticia1'), document.getElementById('noticia2'), document.getElementById('noticia3'), document.getElementById('noticia4'), document.getElementById('noticia5')]
 
 // json de ejemplo que he encontrado por internet
 fetch('../data/datos.json')
@@ -7,7 +7,7 @@ fetch('../data/datos.json')
         let contador = 0
         
         data.items.forEach(item => {
-            NOTICIAS[contador].innerHTML = 
+            noticias[contador].innerHTML = 
             // los titulos de las noticias son enlaces que venian con el json a la pagina original, aunque no llevan a ningun lado
             `
             <p> <a href="${item.url}"><h3>${item.title}</h3> </a></p>

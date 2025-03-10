@@ -1,5 +1,4 @@
 let producto = document.getElementById('producto')
-let dm = document.getElementById('dm')
 let plazo = document.getElementById('plazo')
 let colorperso = document.getElementById('colorperso')
 let ram = document.getElementById('ram')
@@ -12,8 +11,8 @@ function calcular_presupuesto(){
     let precio = 0;
 
     precio = anadir_producto(precio);
-    precio = anadir_plazo(precio);
     precio = anadir_extras(precio);
+    precio = anadir_plazo(precio);
 
     presupuesto.value = precio;
 }
@@ -52,10 +51,18 @@ function anadir_producto(precio){
     return precio;
 }
 
-// deberia añadirse un recargo extra si el cliente decide recibir el telefono en menos de 5 dias habiles
+// descuento calculado en base a los dias que tardara en entregarse el producto
+// el precio se reduce un 2% por cada dia adicional que tarde en hacerse la entrega 
+// hasta un maximo de un 14%
 function anadir_plazo(precio){
-    if(dm.value == 'meses' || plazo.value >= 5){return precio;}
-    else {precio += 5; return precio;}
+    // calcular descuento, 2% por dia superior al 1
+    if (plazo.value > 7) {
+        precio = precio * .86;
+    } else if (plazo.value > 0) {
+        let descuento = (100 - (plazo.value - 1) * 2) / 100
+        precio = precio * descuento
+    }
+    return parseFloat(precio).toFixed(2); // max dos decimales
 }
 
 function anadir_extras(precio){
