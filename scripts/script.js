@@ -1,7 +1,7 @@
 const noticias = [document.getElementById('noticia1'), document.getElementById('noticia2'), document.getElementById('noticia3'), document.getElementById('noticia4'), document.getElementById('noticia5')]
 
 // json de ejemplo que he encontrado por internet
-fetch('../data/datos.json')
+fetch('https://raw.githubusercontent.com/MartinRubio96/trabajo-JS/refs/heads/main/data/datos.json')
     .then(response => response.json())
     .then(data => {
         let contador = 0
