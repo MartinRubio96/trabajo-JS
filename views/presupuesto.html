@@ -93,9 +93,10 @@
                             </tr>
                             <tr>
                                 <!-- el descuento de los plazos se realiza sobre el precio del producto mas los extras elegidos 
-                                ((PRODUCTO + EXTRAS) / DESCUENTO) -->
+                                ((PRODUCTO + EXTRAS) / DESCUENTO) 
+                                se descuenta un 2% del precio total por cada dia añadido al plazo hasta un máximo de 14% -->
                                 <td><label for="plazo">Plazo en días:</label></td>
-                                <td><input type="number" id="plazo" min="1" value="1" onchange="calcular_presupuesto()"></td>
+                                <td><input type="number" id="plazo" min="1" value="1" onchange="calcular_presupuesto()" size="1"> Dto: <input id="dto" type="text" value="0" size="3" disabled> €</td>
                             </tr>
                         </table>
                         <table>
@@ -115,7 +116,7 @@
                         <table>
                             <tr>
                                 <td>Presupuesto:</td>
-                                <td><input type="text" id="presupuesto" size="10" value="100.00" disabled> €</td>
+                                <td><input type="text" id="presupuesto" size="4" value="100.00" disabled> €</td>
                             </tr>
                         </table>
                     </div>

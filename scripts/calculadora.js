@@ -4,6 +4,7 @@ let colorperso = document.getElementById('colorperso')
 let ram = document.getElementById('ram')
 let almacen = document.getElementById('almacen')
 let presupuesto = document.getElementById('presupuesto')
+let dto = document.getElementById('dto')
 
 // llama a todas las demas funciones para calcular el presupuesto final, teniendo en cuenta las opciones del formulario
 // cada vez que se realice un cambio en una opcion se llamara a esta funcion para recalcular el presupuesto completo
@@ -56,11 +57,15 @@ function anadir_producto(precio){
 // hasta un maximo de un 14%
 function anadir_plazo(precio){
     // calcular descuento, 2% por dia superior al 1
+    // codigo muy feo sinceramente
     if (plazo.value > 7) {
+        dto.value = parseFloat(precio * .14).toFixed(2); // 
         precio = precio * .86;
     } else if (plazo.value > 0) {
-        let descuento = (100 - (plazo.value - 1) * 2) / 100
-        precio = precio * descuento
+        let descuento = (100 - (plazo.value - 1) * 2) / 100;
+        dto.value = parseFloat((1 - descuento) * precio).toFixed(2);
+        precio = precio * descuento;
+        
     }
     return parseFloat(precio).toFixed(2); // max dos decimales
 }
